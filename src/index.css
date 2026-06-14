@@ -8,8 +8,9 @@
   --poster-placeholder-bg: #e5e7eb;
   --accent: #6366f1;
   --accent-bg: rgba(99, 102, 241, 0.12);
+  --skeleton-shine: #f3f4f6;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
 
   font: 16px/150% var(--sans);
   color: var(--text);
@@ -30,6 +31,7 @@
     --poster-placeholder-bg: #374151;
     --accent: #818cf8;
     --accent-bg: rgba(129, 140, 248, 0.15);
+    --skeleton-shine: #374151;
   }
 }
 

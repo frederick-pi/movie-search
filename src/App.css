@@ -7,13 +7,40 @@
 .app-header {
   border-bottom: 1px solid var(--border);
   padding: 20px 24px;
+  background: var(--card-bg);
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-header__logo {
+  font-size: 36px;
+  line-height: 1;
 }
 
 .app-title {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: -0.5px;
   color: var(--text-h);
+  line-height: 1.2;
+}
+
+.app-subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text);
 }
 
 .app-main {
@@ -33,7 +60,9 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   cursor: default;
 }
 
@@ -86,6 +115,53 @@
   font-weight: 600;
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.movie-card--skeleton {
+  pointer-events: none;
+}
+
+.movie-card__poster--skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--poster-placeholder-bg) 25%,
+    var(--skeleton-shine) 50%,
+    var(--poster-placeholder-bg) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeleton-line {
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--poster-placeholder-bg) 25%,
+    var(--skeleton-shine) 50%,
+    var(--poster-placeholder-bg) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeleton-line--title {
+  height: 13px;
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+.skeleton-line--meta {
+  height: 11px;
+  width: 55%;
+}
+
 .search-input-wrapper {
   position: relative;
   display: flex;
@@ -111,7 +187,9 @@
   font-size: 15px;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
   box-sizing: border-box;
 }
 

@@ -1,12 +1,12 @@
-import type { Movie } from '../types/movie';
-import { TMDB_IMAGE_BASE_URL } from '../lib/tmdb';
+import type { Movie } from "../types/movie";
+import { TMDB_IMAGE_BASE_URL } from "../api/constants";
 
 interface MovieCardProps {
   movie: Movie;
 }
 
 export function MovieCard({ movie }: MovieCardProps) {
-  const year = movie.release_date ? movie.release_date.slice(0, 4) : '—';
+  const year = movie.release_date ? movie.release_date.slice(0, 4) : "—";
 
   return (
     <div className="movie-card">
